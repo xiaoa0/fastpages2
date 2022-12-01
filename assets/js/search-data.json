@@ -2,10 +2,10 @@
   
     
         "post0": {
-            "title": "Unit 7 ArrayList",
+            "title": "Unit 7: ArrayList",
             "content": "Arraylist is mutable and Loops for arraylist traversing: for, while, foreach loop that iterates through each item in list . private int findMin(Arraylist&lt;Integer&gt; values) { int min=INTEGER_MAX_VALUE; for (int currentValue:values) [ ] } . Search: arrays and lists, queues and stacks .",
-            "url": "https://xiaoa0.github.io/fastpages2/2022/12/01/arraylist.html",
-            "relUrl": "/2022/12/01/arraylist.html",
+            "url": "https://xiaoa0.github.io/fastpages2/cbunits/2022/12/01/arraylist.html",
+            "relUrl": "/cbunits/2022/12/01/arraylist.html",
             "date": " • Dec 1, 2022"
         }
         
@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "Unit 3 Objects presentation",
+            "title": "Unit 2: Objects presentation",
             "content": "Classes . Classes are blueprints for objects | You can create multiple objects from one class and have them inherit properties, making it easy to manage data | . In the example below, the class Math has an attribute. Can you name it? . What will the output of this code be? . public class Main { int x; public Main(int y) { // this is the constructor, which sets the value of y x = y; } public static void main(String[] args) { // Main myObj = new Main(5); System.out.println(myObj.x); } } . Objects . Constructor syntax is &quot;Class objectName = new Class(parameters);&quot; | Objects are created from classes using a class constructor | . Can you find the constructors in this code? . What would this code print? . public class Main { int x = 5; public static void main(String[] args) { Main myObj1 = new Main(); // object 1 Main myObj2 = new Main(); // object 2 System.out.println(myObj1.x); System.out.println(myObj2.x); } } . Methods . Essentially functions in Java | Can declare a method and then call it | . Where is the method in this code and what is the output? . public class Main { static void myMethod() { System.out.println(&quot;I was just executed!&quot;); } public static void main(String[] args) { myMethod(); } } .",
             "url": "https://xiaoa0.github.io/fastpages2/cbunits/2022/10/13/objectslesson.html",
             "relUrl": "/cbunits/2022/10/13/objectslesson.html",
@@ -35,7 +35,7 @@
   
     
         ,"post3": {
-            "title": "Unit 2 Primitives",
+            "title": "Unit 1: Primitives",
             "content": "Predefined, lowercase, can&#39;t call methods, value, different sizes | Non-primitives? | Boolean, int, double (required by CB) | . Naming conventions . Lowercase, then 2nd word is capitalized Final key word will make it so you will not change a value later Casting: manual vs automatic Change value from one type to another, can narrow or widen Need to declare narrowing bc of overflow error . Operators . +, -, /, %, *, . User input . Import java.util.Scanner Use Scanner scan=new Scanner(System.in); Scanner = new data type . Homework . 2a. Multiplying the tax rate + 1 gives the actual multiplier we want to use for the new price, since it includes the tax and existing price. . public interface Item { double purchasePrice(); } public abstract class TaxableItem implements Item { private double taxRate; public abstract double getListPrice(); public TaxableItem(double rate) { taxRate = rate; } // returns the price of the item including the tax public double purchasePrice() { return (1 + taxRate) * getListPrice();} } . 3a. Returning nameCompare if it&#39;s not 0, subtracting IDs otherwise . public class Customer { // constructs a Customer with given name and ID number public Customer(String name, int idNum) { /* implementation not shown */ } // returns the customer&#39;s name public String getName() { /* implementation not shown */ } // returns the customer&#39;s id public int getID() { /* implementation not shown */ } // returns 0 when this customer is equal to other; // a positive integer when this customer is greater than other; // a negative integer when this customer is less than other public int compareCustomer(Customer other) { int nameCompare = getName().compareTo(other.getName()); if (nameCompare != 0) { return nameCompare; } else { return getID() - other.getID(); } } // There may be fields, constructors, and methods that are not shown. } .",
             "url": "https://xiaoa0.github.io/fastpages2/cbunits/2022/10/12/primitives.html",
             "relUrl": "/cbunits/2022/10/12/primitives.html",
@@ -47,7 +47,7 @@
     
         ,"post4": {
             "title": "ArrayList",
-            "content": "Basics . After importing the package, I&#39;m creating an arraylist of String type called &quot;math&quot;. I&#39;m adding two lists to math, &quot;basic&quot; and &quot;advanced&quot;. Basic has the 4 basic math operations (add, subtract, multiply, divide) while advanced has more complex ones such as square roots and exponents. I&#39;m using &quot;math.addAll();&quot; to add both lists to the ArrayList, then printing it as the original. . import java.util.ArrayList; // import package ArrayList&lt;String&gt; math = new ArrayList&lt;String&gt;(); // new arraylist List&lt;String&gt; basic = new ArrayList&lt;String&gt;(); // 2 lists to be added to arraylist List&lt;String&gt; advanced = new ArrayList&lt;String&gt;(); basic.add(&quot;addition&quot;); // adding these items to basic list basic.add(&quot;subtraction&quot;); basic.add(&quot;multiplication&quot;); basic.add(&quot;division&quot;); advanced.add(&quot;square root&quot;); // adding to advanced list advanced.add(&quot;exponent&quot;); advanced.add(&quot;logarithm&quot;); math.addAll(basic); math.addAll(advanced); // adding 2 lists to math System.out.println(&quot;Original: &quot; + math); // math has all items from both . Original: [addition, subtraction, multiplication, division, square root, exponent, logarithm] . Modifying . I used the removeAll for the advanced list to show which operations the abacus can&#39;t do, and printed the new list as basic operations. . math.removeAll(advanced); System.out.println(&quot;Basics: &quot; + math); . Basics: [addition, subtraction, multiplication, division] . Removing the last element (number 3) from the arraylist and printing it . math.remove(3); System.out.println(&quot;Remove last element: &quot; + math); . Remove last element: [addition, subtraction, multiplication] . Removing all items from the array so it is now empty . math.clear(); System.out.println(&quot;Cleared: &quot; + math); .",
+            "content": "Basics . After importing the package, I&#39;m creating an arraylist of String type called &quot;math&quot;. I&#39;m adding two lists to math, &quot;basic&quot; and &quot;advanced&quot;. Basic has the 4 basic math operations (add, subtract, multiply, divide) while advanced has more complex ones such as square roots and exponents. I&#39;m using &quot;math.addAll();&quot; to add both lists to the ArrayList, then printing it as the original. . import java.util.ArrayList; // import package ArrayList&lt;String&gt; math = new ArrayList&lt;String&gt;(); // new arraylist List&lt;String&gt; basic = new ArrayList&lt;String&gt;(); // 2 lists to be added to arraylist List&lt;String&gt; advanced = new ArrayList&lt;String&gt;(); basic.add(&quot;addition&quot;); // adding these items to basic list basic.add(&quot;subtraction&quot;); basic.add(&quot;multiplication&quot;); basic.add(&quot;division&quot;); advanced.add(&quot;square root&quot;); // adding to advanced list advanced.add(&quot;exponent&quot;); advanced.add(&quot;logarithm&quot;); math.addAll(basic); math.addAll(advanced); // adding 2 lists to math System.out.println(&quot;Original: &quot; + math); // math has all items from both . Original: [addition, subtraction, multiplication, division, square root, exponent, logarithm] . Modifying . I used the removeAll for the advanced list to show which operations the abacus can&#39;t do, and printed the new list as basic operations. . math.removeAll(advanced); System.out.println(&quot;Basics: &quot; + math); . Basics: [addition, subtraction, multiplication, division] . Removing the last element (number 3) from the arraylist and printing it . math.remove(3); System.out.println(&quot;Remove last element: &quot; + math); . Remove last element: [addition, subtraction, multiplication] . Removing all items from the array so it is now empty . math.clear(); System.out.println(&quot;Cleared: &quot; + math); . Cleared: [] .",
             "url": "https://xiaoa0.github.io/fastpages2/apprep/2022/10/08/arraylist.html",
             "relUrl": "/apprep/2022/10/08/arraylist.html",
             "date": " • Oct 8, 2022"
@@ -281,8 +281,8 @@
 
   
       ,"page2": {
-          "title": "CB notes",
-          "content": "Week Subject Notes . 4 | FRQ 1 | 2019 Q1 | . 3 | Backend Development | Booleans | . 2 | Objects | Using Objects | . 1 | Primitives | Java notes + function | . 0 | Setup | Anatomy of Java | .",
+          "title": "CB Units",
+          "content": "Unit Subject Homework . 1 | Primitive Types | 2006 FRQ | . 2 | Objects (taught) | Lesson Notebook | . 3 | Booleans and If Statements |   | . 4 | Iteration |   | . 5 | Writing Classes |   | . 6 | Arrays |   | . 7 | ArrayList | Notebook | .",
           "url": "https://xiaoa0.github.io/fastpages2/cb/",
           "relUrl": "/cb/",
           "date": ""
