@@ -12,4 +12,4 @@ permalink: /cb/
 | 4 | Iteration |  |
 | 5 | Writing Classes |  |
 | 6 | Arrays |  |
-| 7 | ArrayList | [Notebook](https://xiaoa0.github.io/fastpages2/2022/12/01/arraylist.html) |
+| 7 | ArrayList | [Notebook](https://xiaoa0.github.io/fastpages2/cbunits/2022/12/01/arraylist.html) |
