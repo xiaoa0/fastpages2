@@ -169,6 +169,131 @@ Loops for arraylist traversing: for, while, foreach loop that iterates through e
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h3><ul>
+<li>Sort an ArrayList in descending order and swap the first and last elements</li>
+<li>Return "ascending" if the list is sorted in ascending order, return "descending" if it is descending, and return "neither" if neither</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span> <span class="c1">// creating arraylist</span>
+
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Great Expectations&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;The Brothers Karamazov&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Frankenstein&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Fahrenheit 451&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;The Great Gatsby&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Hamlet&quot;</span><span class="p">);</span>
+
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">books</span><span class="p">);</span> <span class="c1">// showing sorted books in descending order</span>
+
+<span class="n">String</span> <span class="n">temp1</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span> <span class="c1">// assigning temp1 to store first item in sorted list</span>
+<span class="n">String</span> <span class="n">temp2</span> <span class="o">=</span> <span class="n">books</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">books</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span> <span class="c1">// temp2 holds last item</span>
+
+<span class="n">books</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">temp2</span><span class="p">);</span> <span class="c1">// setting first item as temp2 (last item)</span>
+<span class="n">books</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">books</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">temp1</span><span class="p">);</span> <span class="c1">// setting last string as temp1 (first)</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">books</span><span class="p">);</span> <span class="c1">// printing</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[The Great Gatsby, The Brothers Karamazov, Hamlet, Great Expectations, Frankenstein, Fahrenheit 451]
+[Fahrenheit 451, The Brothers Karamazov, Hamlet, Great Expectations, Frankenstein, The Great Gatsby]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span> <span class="c1">// creating arraylist</span>
+
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Great Expectations&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;The Brothers Karamazov&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Frankenstein&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Fahrenheit 451&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;The Great Gatsby&quot;</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Hamlet&quot;</span><span class="p">);</span>
+
+<span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">books2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">books</span><span class="p">);</span> <span class="c1">// making books2 (copy of books) for testing</span>
+
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">books2</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">books</span> <span class="o">==</span> <span class="n">books2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">books2</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">books</span> <span class="o">==</span> <span class="n">books2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">else</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.IllegalStateException: No result with key: </span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.ijava.execution.IJavaExecutionControl.takeResult(IJavaExecutionControl.java:90)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.ijava.execution.CodeEvaluator.evalSingle(CodeEvaluator.java:92)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.ijava.execution.CodeEvaluator.eval(CodeEvaluator.java:147)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.ijava.JavaKernel.evalRaw(JavaKernel.java:276)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.ijava.JavaKernel.eval(JavaKernel.java:281)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.jupyter.kernel.BaseKernel.handleExecuteRequest(BaseKernel.java:334)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.jupyter.channels.ShellChannel.lambda$bind$0(ShellChannel.java:64)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.jupyter.channels.Loop.lambda$new$0(Loop.java:21)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at io.github.spencerpark.jupyter.channels.Loop.run(Loop.java:78)</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
