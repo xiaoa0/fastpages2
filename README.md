@@ -5,7 +5,7 @@ https://xiaoa0.github.io/fastpages_test/
 # My Blog
 
 
-_**DO NOT clone this repo to shortcut fastpages setup, clone the [fastai one](https://github.com/fastai/fastpages) and follow steps in PR to setup GH Pages automated process**_
+_**DO NOT clone this repo to shortcut fastpages setup, clone the [fastai one](https://github.com/fastai/fastpages) and follow steps in PR to setup GH Pages automation. Deployment will not work with cloning**_
 
 
 ## What To Do Next?
