@@ -1,6 +1,6 @@
 [//]: # (This template replaces README.md when someone creates a new repo with the fastpages template.)
 
-https://xiaoa0.github.io/fastpages_test/
+https://xiaoa0.github.io/fastpages2/
 
 # My Blog
 
