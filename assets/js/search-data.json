@@ -58,7 +58,7 @@
     
         ,"post5": {
             "title": "Unit 5: Writing Classes",
-            "content": "Homework . 2021 1a, 3a .",
+            "content": "Notes . Classes are &quot;blueprints&quot; for objects | Define abstract data type, reference objects and instance variables | Objects store state, attributes, behavior | . Operations . Methods are behaviors or actions (think functions) applied to objects | Use constructors to make objects | Main method used to test class (public static void) | . Methods . Accessor methods lets you &#39;get&#39; variable values | Mutator methods lets you change instance variables | Non-void methods return value of data type, no parameters | Void methods don&#39;t return anything but take parameters | . // modifier, return type, name, parameters public double getArea (double width, double height) { // method body } . Homework . 2021 1a, 3a . // 1a: write the method scoreGuess public class WordMatch { private String secret; public WordMatch(String word) { } public int scoreGuess(String guess) { int score = 0; for (int i = 0; i&lt;= secret.length()-guess.length(); i++) { if (secret.substring(i, i+guess.length()) == guess) { score++; } } } return score * guess.length() * guess.length(); } . // 3a: Write the ClubMembers method addMembers public class ClubMembers { private ArrayList&lt;MemberInfo&gt; memberList; public void addMembers(String[] names, int gradYear) { for (String name : names) { memberList.add(new MemberInfo(name, gradYear, t)); } } } .",
             "url": "https://xiaoa0.github.io/fastpages2/cbunits/jupyter/2022/11/20/classes.html",
             "relUrl": "/cbunits/jupyter/2022/11/20/classes.html",
             "date": " • Nov 20, 2022"
