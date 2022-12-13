@@ -135,6 +135,113 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h3><p>Inheritance is used to store attributes for subclasses, making abstraction easier and reducing risk of error
+Subclass constructor has to include "super" to access superclass parameters
+Use @Override to override a method
+Object superclass is built into Java, used for methods such as</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Homework">Homework<a class="anchor-link" href="#Homework"> </a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>World Cup superclass</p>
+<ul>
+<li>Create a world cup superclass with properties of your choice and subclasses for five teams which inherits those properties</li>
+<li>Write a constructor for one of those subclasses</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WorldCup</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">year</span> <span class="o">=</span> <span class="mi">2022</span><span class="p">;</span>
+
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">USA</span> <span class="kd">extends</span> <span class="n">WorldCup</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Teacher extended class</p>
+<ul>
+<li>Add a getAge method in the Person super class</li>
+<li>Create a new subclass Student with additional members of your choice to personalize the Student class</li>
+<li>Create a new subclass Teacher with additiona members of your choice</li>
+<li>Override the toString method using the @Override to print a Student and teacher object with new members</li>
+<li>Print the student and teacher</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">){</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+ 
+ <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Student</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">;</span>
+ 
+    <span class="kd">public</span> <span class="nf">Student</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">,</span> <span class="kt">int</span> <span class="n">grade</span><span class="p">,</span> <span class="kt">double</span> <span class="n">gpa</span><span class="p">)</span> <span class="p">{</span>
+       <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">birthday</span><span class="p">);</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">grade</span> <span class="o">=</span> <span class="n">grade</span><span class="p">;</span>
+       <span class="k">this</span><span class="p">.</span><span class="na">gpa</span> <span class="o">=</span> <span class="n">gpa</span><span class="p">;</span>
+    <span class="p">}</span>
+ 
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getGrade</span><span class="p">(){</span>
+       <span class="k">return</span> <span class="n">grade</span><span class="p">;</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
