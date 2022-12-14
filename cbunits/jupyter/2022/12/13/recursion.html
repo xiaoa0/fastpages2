@@ -135,6 +135,61 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Basics">Basics<a class="anchor-link" href="#Basics"> </a></h3><ul>
+<li>Recursive method calls itself</li>
+<li>Should have at least one case to stop recursion (uses local variables)</li>
+<li>Similar to iteration, but sometimes more convenient</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">test</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Binary-search">Binary search<a class="anchor-link" href="#Binary-search"> </a></h3><ul>
+<li>Binary search continually splits array in two to reduce values to search for target </li>
+<li>Must be sorted</li>
+<li>Ex: if searching for 23 in array of even numbers, high and low boundaries will converge on 22 and 24</li>
+<li>Program will know that 23 is not in array and stop recursion</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Merge-sort">Merge sort<a class="anchor-link" href="#Merge-sort"> </a></h3><ul>
+<li>Used to sort ArrayLists</li>
+<li>Divides array in half, calls itself for two halves to sort and then merges the halves back into one array</li>
+<li>Can copy array, go through each element to compare and return each element sorted in original</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 
 
