@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -137,10 +137,13 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h3><p>Inheritance is used to store attributes for subclasses, making abstraction easier and reducing risk of error
-Subclass constructor has to include "super" to access superclass parameters
-Use @Override to override a method
-Object superclass is built into Java, used for methods such as</p>
+<h3 id="Notes">Notes<a class="anchor-link" href="#Notes"> </a></h3><ul>
+<li>Inheritance is used to store attributes for subclasses, making abstraction easier and reducing risk of error</li>
+<li>Subclass constructor has to include "super" to access superclass parameters</li>
+<li>Use @Override to override a method</li>
+<li>One useful superclass is Object from java.lang</li>
+<li>Polymorphism is when a method is used for different tasks in different classes (different forms)</li>
+</ul>
 
 </div>
 </div>
@@ -170,14 +173,92 @@ Object superclass is built into Java, used for methods such as</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WorldCup</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">Integer</span> <span class="n">year</span> <span class="o">=</span> <span class="mi">2022</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">wins</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">games</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">WorldCup</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">games</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">wins</span> <span class="o">=</span> <span class="n">wins</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">losses</span> <span class="o">=</span> <span class="n">losses</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">games</span> <span class="o">=</span> <span class="n">games</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;Wins = &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">wins</span> <span class="o">+</span> <span class="s">&quot;, Losses = &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">losses</span> <span class="o">+</span> <span class="s">&quot;, Games = &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">games</span><span class="p">;</span>
+    <span class="p">}</span>
 
 <span class="p">}</span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">USA</span> <span class="kd">extends</span> <span class="n">WorldCup</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">USA</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span> 
+    <span class="kd">public</span> <span class="nf">USA</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">games</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span> <span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">games</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Spain</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span> 
+    <span class="kd">public</span> <span class="nf">Spain</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">games</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span> <span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">games</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">France</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span> 
+    <span class="kd">public</span> <span class="nf">France</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">games</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span> <span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">games</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Morocco</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span> 
+    <span class="kd">public</span> <span class="nf">Morocco</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">games</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span> <span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">games</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Argentina</span> <span class="kd">extends</span> <span class="n">WorldCup</span> <span class="p">{</span> 
+    <span class="kd">public</span> <span class="nf">Argentina</span> <span class="p">(</span><span class="kt">int</span> <span class="n">wins</span><span class="p">,</span> <span class="kt">int</span> <span class="n">losses</span><span class="p">,</span> <span class="kt">int</span> <span class="n">games</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span> <span class="p">(</span><span class="n">wins</span><span class="p">,</span> <span class="n">losses</span><span class="p">,</span> <span class="n">games</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Test</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">Main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">USA</span> <span class="n">usa</span> <span class="o">=</span> <span class="k">new</span> <span class="n">USA</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team name: USA, &quot;</span> <span class="o">+</span> <span class="n">usa</span><span class="p">);</span>
+
+        <span class="n">Spain</span> <span class="n">spain</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Spain</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team name: Spain, &quot;</span> <span class="o">+</span> <span class="n">spain</span><span class="p">);</span>
+
+        <span class="n">France</span> <span class="n">france</span> <span class="o">=</span> <span class="k">new</span> <span class="n">France</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team name: France, &quot;</span> <span class="o">+</span> <span class="n">france</span><span class="p">);</span>
+
+        <span class="n">Morocco</span> <span class="n">morocco</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Morocco</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team name: Morocco, &quot;</span> <span class="o">+</span> <span class="n">morocco</span><span class="p">);</span>
+
+        <span class="n">Argentina</span> <span class="n">argentina</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Argentina</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Team name: Argentina, &quot;</span> <span class="o">+</span> <span class="n">argentina</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">Test</span><span class="p">.</span><span class="na">Main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Team name: USA, Wins = 3, Losses = 1, Games = 4
+Team name: Spain, Wins = 2, Losses = 2, Games = 4
+Team name: France, Wins = 4, Losses = 1, Games = 5
+Team name: Morocco, Wins = 4, Losses = 0, Games = 6
+Team name: Argentina, Wins = 5, Losses = 1, Games = 6
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
