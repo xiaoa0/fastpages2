@@ -286,13 +286,19 @@ Team name: Argentina, Wins = 5, Losses = 1, Games = 6
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Date</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">;</span>
  
     <span class="kd">public</span> <span class="nf">Person</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="n">String</span> <span class="n">birthday</span><span class="p">){</span>
        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
        <span class="k">this</span><span class="p">.</span><span class="na">birthday</span> <span class="o">=</span> <span class="n">birthday</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getAge</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="p">(</span><span class="n">LocalDate</span><span class="p">.</span><span class="na">now</span><span class="p">())</span>
     <span class="p">}</span>
  
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">(){</span>
