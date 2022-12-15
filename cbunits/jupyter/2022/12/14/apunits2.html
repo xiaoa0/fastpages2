@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -144,6 +144,7 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#Unit-10:-Recursion">Unit 10: Recursion </a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#Standard-methods">Standard methods </a></li>
 <li class="toc-entry toc-h3"><a href="#Big-O-notation">Big O notation </a></li>
 </ul>
 </li>
@@ -496,8 +497,8 @@ z x c v b n m , . /
 <h3 id="Subclass-constructor,-super-Keyword">
 <a class="anchor" href="#Subclass-constructor,-super-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subclass constructor, super Keyword<a class="anchor-link" href="#Subclass-constructor,-super-Keyword"> </a>
 </h3>
-<p>public class Subclass extends Parentclass {}
-Super is used to refer to objects in the parent class</p>
+<p>public class Subclass extends Parentclass {}</p>
+<p>Super is used to refer to objects in the parent class</p>
 
 </div>
 </div>
@@ -544,8 +545,8 @@ Super is used to refer to objects in the parent class</p>
 <h3 id="Polymorphism-(overloading/overriding)">
 <a class="anchor" href="#Polymorphism-(overloading/overriding)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polymorphism (overloading/overriding)<a class="anchor-link" href="#Polymorphism-(overloading/overriding)"> </a>
 </h3>
-<p>Using one method in several different ways through inheritance (override)
-Overload is what happens when two methods with the same name have different arguments</p>
+<p>Using one method in several different ways through inheritance (override)</p>
+<p>Overload is what happens when two methods with the same name have different arguments</p>
 
 </div>
 </div>
@@ -593,17 +594,94 @@ Overload is what happens when two methods with the same name have different argu
 <a class="anchor" href="#Unit-10:-Recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 10: Recursion<a class="anchor-link" href="#Unit-10:-Recursion"> </a>
 </h2>
 <p>Summary:</p>
+<ul>
+<li>Recursive method calls itself, should have at least one stop case</li>
+<li>Uses local variables and parameters, often interchangeable with iterative loop</li>
+<li>Used to traverse String, array, and ArrayList objects</li>
+<li>Recursion trees are a visual representation of each recursion case <img src="https://www.cs.cornell.edu/courses/cs3110/2012sp/lectures/lec20-master/images/lec19-diagram3.png" alt="">
+</li>
+</ul>
 
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">test</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">test</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Standard-methods">
+<a class="anchor" href="#Standard-methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard methods<a class="anchor-link" href="#Standard-methods"> </a>
+</h3>
+<p>tostring() returns an object as a string</p>
+<p>equals() compares two given strings to see if they match</p>
+<p>hashCode() returns hash values of input objects</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">Integer</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span> <span class="c1">// printing a as a string</span>
+
+<span class="n">String</span> <span class="n">hw</span> <span class="o">=</span> <span class="s">"hello world"</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">hw</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10
+1794106052
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Big-O-notation">
 <a class="anchor" href="#Big-O-notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big O notation<a class="anchor-link" href="#Big-O-notation"> </a>
 </h3>
-<p>Vocab definition</p>
+<p>Used to categorize an algorithm's efficiency and scalability (changes in performance based on data size)</p>
 
 </div>
 </div>
