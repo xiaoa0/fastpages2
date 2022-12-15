@@ -128,16 +128,8 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h2"><a href="#Grades">Grades </a></li>
-<li class="toc-entry toc-h2"><a href="#Unit-6:-Arrays">Unit 6: Arrays </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Vocab">Vocab </a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#Unit-7:-ArrayList">Unit 7: ArrayList </a>
-<ul>
-<li class="toc-entry toc-h3"><a href="#Vocab">Vocab </a></li>
-</ul>
-</li>
+<li class="toc-entry toc-h2"><a href="#Unit-6:-Arrays">Unit 6: Arrays </a></li>
+<li class="toc-entry toc-h2"><a href="#Unit-7:-ArrayList">Unit 7: ArrayList </a></li>
 <li class="toc-entry toc-h2"><a href="#Unit-8:-2D-Array">Unit 8: 2D Array </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Vocab">Vocab </a></li>
@@ -145,12 +137,14 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#Unit-9:-Inheritance">Unit 9: Inheritance </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Vocab">Vocab </a></li>
+<li class="toc-entry toc-h3"><a href="#Inheritance-(extends)">Inheritance (extends) </a></li>
+<li class="toc-entry toc-h3"><a href="#Subclass-constructor,-super-Keyword">Subclass constructor, super Keyword </a></li>
+<li class="toc-entry toc-h3"><a href="#Overloading-and-Overriding-a-method">Overloading and Overriding a method </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Unit-10:-Recursion">Unit 10: Recursion </a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#Vocab">Vocab </a></li>
+<li class="toc-entry toc-h3"><a href="#Big-O-notation">Big O notation </a></li>
 </ul>
 </li>
 </ul><!--
@@ -220,17 +214,12 @@ window.onload = wrap_img;
 <a class="anchor" href="#Unit-6:-Arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 6: Arrays<a class="anchor-link" href="#Unit-6:-Arrays"> </a>
 </h2>
 <p>Summary:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vocab">
-<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
-</h3>
-<p>Vocab definition</p>
+<ul>
+<li>Array is a collection of data (not to be confused with ArrayList </li>
+<li>Can hold both primitive and referenced data types ()</li>
+<li>Track position in array with index (location/order of elements) and length of array (conditional loops)</li>
+<li>Cannot be changed once created</li>
+</ul>
 
 </div>
 </div>
@@ -242,10 +231,33 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// Vocab code</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span><span class="o">[]</span> <span class="n">arrayTest</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">};</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arrayTest</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arrayTest</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+2
+3
+4
+5
+6
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -259,17 +271,13 @@ window.onload = wrap_img;
 <a class="anchor" href="#Unit-7:-ArrayList" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unit 7: ArrayList<a class="anchor-link" href="#Unit-7:-ArrayList"> </a>
 </h2>
 <p>Summary:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vocab">
-<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
-</h3>
-<p>Vocab definition</p>
+<ul>
+<li>Dynamic, unlike static array</li>
+<li>Need to import java.util.ArrayList</li>
+<li>Can sort descending or ascending order</li>
+<li>Also uses loops (enhanced for loop) to traverse</li>
+<li>More useful in algorithms</li>
+</ul>
 
 </div>
 </div>
@@ -281,10 +289,35 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// vocab code</span>
+<div class=" highlight hl-java"><pre><span></span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">books</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span> <span class="c1">// creating arraylist</span>
+
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Great Expectations"</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"The Brothers Karamazov"</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Frankenstein"</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Fahrenheit 451"</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"The Great Gatsby"</span><span class="p">);</span>
+<span class="n">books</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Hamlet"</span><span class="p">);</span>
+
+<span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">books</span><span class="p">,</span> <span class="n">Collections</span><span class="p">.</span><span class="na">reverseOrder</span><span class="p">());</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">books</span><span class="p">);</span> <span class="c1">// showing sorted books in descending order</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[The Great Gatsby, The Brothers Karamazov, Hamlet, Great Expectations, Frankenstein, Fahrenheit 451]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -344,11 +377,29 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vocab">
-<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+<h3 id="Inheritance-(extends)">
+<a class="anchor" href="#Inheritance-(extends)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inheritance (extends)<a class="anchor-link" href="#Inheritance-(extends)"> </a>
 </h3>
 <p>Vocab definition</p>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Subclass-constructor,-super-Keyword">
+<a class="anchor" href="#Subclass-constructor,-super-Keyword" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subclass constructor, super Keyword<a class="anchor-link" href="#Subclass-constructor,-super-Keyword"> </a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Overloading-and-Overriding-a-method">
+<a class="anchor" href="#Overloading-and-Overriding-a-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overloading and Overriding a method<a class="anchor-link" href="#Overloading-and-Overriding-a-method"> </a>
+</h3>
 </div>
 </div>
 </div>
@@ -383,8 +434,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vocab">
-<a class="anchor" href="#Vocab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vocab<a class="anchor-link" href="#Vocab"> </a>
+<h3 id="Big-O-notation">
+<a class="anchor" href="#Big-O-notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big O notation<a class="anchor-link" href="#Big-O-notation"> </a>
 </h3>
 <p>Vocab definition</p>
 
