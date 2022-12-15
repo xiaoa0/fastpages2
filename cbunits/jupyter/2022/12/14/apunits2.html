@@ -693,7 +693,28 @@ z x c v b n m , . /
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// vocab code</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">binaryRecursive</span><span class="p">(</span><span class="kt">int</span> <span class="n">search</span><span class="p">,</span> <span class="kt">int</span><span class="o">[]</span> <span class="n">array</span><span class="p">,</span> <span class="kt">int</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span> <span class="n">end</span><span class="p">){</span>
+                
+    <span class="kt">int</span> <span class="n">middle</span> <span class="o">=</span> <span class="p">(</span><span class="n">start</span> <span class="o">+</span> <span class="n">end</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span> <span class="c1">// setting the starting boundaries for search by dividing array in 2</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">end</span> <span class="o">&lt;</span> <span class="n">start</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// error handling</span>
+            <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span> 
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">search</span> <span class="o">&lt;</span> <span class="n">array</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="k">return</span> <span class="n">binaryRecursive</span><span class="p">(</span><span class="n">search</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">middle</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// lowering range of index values if search is less than the new middle</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">search</span> <span class="o">&gt;</span> <span class="n">array</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">binaryRecursive</span><span class="p">(</span><span class="n">search</span><span class="p">,</span> <span class="n">array</span><span class="p">,</span> <span class="n">middle</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="p">);</span> <span class="c1">// narrowing range of index values to upper range of array</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">search</span> <span class="o">==</span> <span class="n">array</span><span class="o">[</span><span class="n">middle</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// success  case</span>
+        <span class="k">return</span> <span class="n">middle</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
