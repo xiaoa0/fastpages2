@@ -170,11 +170,9 @@ window.onload = wrap_img;
         <span class="n">values</span><span class="o">[</span><span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">firstElement</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">zeroEvens</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">zeroAll</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">values</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
-            <span class="k">if</span><span class="p">(</span><span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
-                <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-            <span class="p">}</span>
+            <span class="n">values</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="p">}</span> 
     <span class="p">}</span>
 
@@ -185,9 +183,9 @@ window.onload = wrap_img;
         <span class="n">swapElements</span><span class="p">.</span><span class="na">printElements</span><span class="p">();</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Replacing All Elements w/ Zero: &quot;</span><span class="p">);</span>
-        <span class="n">ArrayMethods</span> <span class="n">zeroEvens</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayMethods</span><span class="p">();</span>
-        <span class="n">zeroEvens</span><span class="p">.</span><span class="na">zeroEvens</span><span class="p">();</span>
-        <span class="n">zeroEvens</span><span class="p">.</span><span class="na">printElements</span><span class="p">();</span>
+        <span class="n">ArrayMethods</span> <span class="n">zeroAll</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayMethods</span><span class="p">();</span>
+        <span class="n">zeroAll</span><span class="p">.</span><span class="na">zeroAll</span><span class="p">();</span>
+        <span class="n">zeroAll</span><span class="p">.</span><span class="na">printElements</span><span class="p">();</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -212,11 +210,11 @@ window.onload = wrap_img;
 5
 1
 Replacing All Elements w/ Zero: 
-1
 0
-3
 0
-5
+0
+0
+0
 0
 </pre>
 </div>
