@@ -5,7 +5,7 @@ https://xiaoa0.github.io/fastpages2/
 # My Blog
 
 
-_**DO NOT clone this repo to shortcut fastpages setup, clone the [fastai one](https://github.com/fastai/fastpages) and follow steps in PR to setup GH Pages automation. Deployment will not work with cloning**_
+**If using this repo as a template be sure to clone all branches and add SSH_DEPLOY_KEY (secret) and a deploy key using [this link](https://8gwifi.org/sshfunctions.jsp), then rerun failed jobs in Actions.**
 
 
 ## Localhost
