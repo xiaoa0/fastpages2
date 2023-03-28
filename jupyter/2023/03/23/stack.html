@@ -277,6 +277,20 @@ Words count: 0, data:
 <span class="n">nums2</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
 
 <span class="n">Queue</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">mergeNums</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">nums2</span><span class="p">.</span><span class="na">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="na">peek</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">nums2</span><span class="p">.</span><span class="na">peek</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// using peek method to access first element in each list w/out removing it</span>
+        <span class="n">mergeNums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nums1</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span> <span class="c1">// adding the lesser value to mergeNums</span>
+        <span class="n">nums1</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span> 
+
+    <span class="k">else</span> <span class="p">{</span> 
+        <span class="n">mergeNums</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nums2</span><span class="p">.</span><span class="na">poll</span><span class="p">());</span> <span class="c1">// adding the lesser value to mergeNums</span>
+        <span class="n">nums2</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">mergeNums</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -288,12 +302,8 @@ Words count: 0, data:
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">nums</span><span class="ansi-black-intense-fg ansi-bold">.add(1);</span>
-<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
-<span class="ansi-red-intense-fg ansi-bold">  symbol:   variable nums</span>
-</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5, 6, 7]</pre>
 </div>
 </div>
 
