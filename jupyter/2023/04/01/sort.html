@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -132,6 +132,17 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Big-O">Big O<a class="anchor-link" href="#Big-O"> </a></h3><p>Big O is an abstraction of efficiency that measures program runtime based on the number of inputs n. It can measure both space and time complexity.</p>
+<p>Merge sort is the most efficient algorithm out of the four listed below. This is because it works by recursively dividing an array or data structure into smaller sub-arrays and sorting each of them. This allows it to be more efficient than some other programs like bubble sort, which requires iterating through each new combination. The worst case time complexity of merge sort is O(nlogn).</p>
+<p>Selection sort is consistent in its performance with time complexity of O(n^2). This is because it uses two loops: one to select a value in the array and another to compare that value to every other one. This means the total time is squared in relation to the number of values. This algorithm is simple and good for small data sets.</p>
+<p>Bubble sort checks each pair of values and swaps them if they are out of order. It also has a complexity of O(n^2) because of the number of swaps that must be performed, which is also close to n^2 in the worst case scenario (reversed order). However it can be improved by adding a check function for segments and skipping the indexes if there is no swap required. Like selection sort, its complexity does not make it suitable for large data sets.</p>
+<p>Insertion sort follows the same type of procedure as selection and bubble sort, but this time the sorted integers are stored in a new array. This adds the same level of complexity O(n^2) in worst-case because it requires sorting from one array and inserting the values into a new one, then also sorting part of that array.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -142,6 +153,8 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.*</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">BubbleSort</span> <span class="p">{</span>
+	<span class="n">Timer</span> <span class="n">timer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Timer</span><span class="p">();</span>
+
 	<span class="kt">void</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
 		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
 		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
@@ -233,7 +246,6 @@ window.onload = wrap_img;
 		<span class="n">ob</span><span class="p">.</span><span class="na">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-<span class="cm">/* This code is contributed by Rajat Mishra*/</span>
 </pre></div>
 
     </div>
@@ -294,9 +306,6 @@ window.onload = wrap_img;
 		<span class="n">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 	<span class="p">}</span>
 <span class="p">};</span>
-
-
-<span class="cm">/* This code is contributed by Rajat Mishra. */</span>
 </pre></div>
 
     </div>
@@ -411,7 +420,6 @@ window.onload = wrap_img;
 		<span class="n">printArray</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 	<span class="p">}</span>
 <span class="p">}</span>
-<span class="cm">/* This code is contributed by Rajat Mishra */</span>
 </pre></div>
 
     </div>
